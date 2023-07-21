@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Shopers.Data;
 using Shopers.Models.Authentication;
+using Shopers.Service.CategoryService;
+using Shopers.Service.LoginService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,7 +22,11 @@ builder.Services.AddIdentity<ProfileUser, IdentityRole>()
     .AddEntityFrameworkStores<DataDbContext>()
     .AddDefaultTokenProviders();
 
+builder.Services.AddScoped<ILoginService, LoginService>(); 
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

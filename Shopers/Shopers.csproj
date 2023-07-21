@@ -25,4 +25,8 @@
     <None Include="C:\Users\ADMIN\source\repos\Shopers\Shopers\.editorconfig" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Service\Product\" />
+  </ItemGroup>
+
 </Project>
