@@ -10,7 +10,7 @@ namespace Shopers.Models.Authentication
         [Required(ErrorMessage = "Vui lòng nhập họ"), DisplayName("Họ")]
         public string LastName { get; set; }
         [Required(ErrorMessage = "Vui lòng nhập tên đăng nhập"), DisplayName("Tên đăng nhập")]
-        public string UserName { get; set; }
+        public string Username { get; set; }
         [EmailAddress]
         [Required(ErrorMessage = "Vui lòng nhập email")]
         public string Email { get; set; }

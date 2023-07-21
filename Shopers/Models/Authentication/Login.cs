@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Shopers.Models.Authentication
 {
-    public class LoginModel
+    public class Login
     {
         [Required(ErrorMessage = "Vui lòng nhập tên đăng nhập"), DisplayName("Tên đăng nhập")]
         public string Username { get; set; }
